@@ -19,8 +19,8 @@ const App = () => {
         <Navbar />
         <div className="mb-12 min-h-screen">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/gallary" element={<GallaryPage />} />
+            <Route path="https://animalkingdompark.onrender.com/" element={<HomePage />} />
+            <Route path="https://animalkingdompark.onrender.com/gallary" element={<GallaryPage />} />
             <Route path="/animals" element={<AnimalsPage />} />
             <Route path="/tickets" element={<TicketsPage />} />
             <Route path="/login" element={<LoginPage />} />
