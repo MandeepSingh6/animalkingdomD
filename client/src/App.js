@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import GallaryPage from "./pages/GallaryPage";
@@ -14,7 +15,8 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <BrowserRouter>
+//     <BrowserRouter>
+    <HashRouter>
       <div className="">
         <Navbar />
         <div className="mb-12 min-h-screen">
@@ -33,7 +35,8 @@ const App = () => {
         </div>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
+//     </BrowserRouter>
   );
 };
 
