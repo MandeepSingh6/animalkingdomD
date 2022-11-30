@@ -3,7 +3,7 @@ import Axios from "axios";
 
 const Gallary = () => {
   // const url = "http://localhost:4000/images";
-  const url = "https://animalkingdompark.onrender.com";
+  const url = "https://animalkingdomparkbackend.onrender.com";
 
   const [images, setImages] = useState([]);
 
