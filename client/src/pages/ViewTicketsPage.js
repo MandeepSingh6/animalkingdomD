@@ -4,7 +4,7 @@ import Axios from "axios";
 
 const ViewTicketsPage = () => {
   // const url = "http://localhost:4000/tickets";
-  const url = "https://animalkingdomparkbackend.onrender.com";
+  const url = "https://animalkingdomparkbackend.onrender.com/tickets";
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
