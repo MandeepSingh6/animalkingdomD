@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const AddImagesPage = () => {
   const navigate = useNavigate();
   // const url = "http://localhost:4000/images";
-  const url = "https://animalkingdomparkbackend.onrender.com";
+  const url = "https://animalkingdomparkbackend.onrender.com/images";
   const [uploadedImage, setUploadedImage] = useState("");
   const [images, setImages] = useState({
     name: "",
