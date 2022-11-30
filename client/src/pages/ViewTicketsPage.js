@@ -15,7 +15,7 @@ const ViewTicketsPage = () => {
     return <h1>No Ticket Found</h1>;
   } else {
     return (
-      <div className="flex justify-center mt-12">
+      <div className="flex flex-col gap-4 justify-center mt-12">
         {tickets.map((ticket, index) => (
           <div className="bg-green-400 w-[70vw] p-4 rounded-md" key={index}>
             <p>
