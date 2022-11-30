@@ -3,7 +3,7 @@ import Axios from "axios";
 
 const Animals = () => {
   // const url = "http://localhost:4000/animals";
-  const url = "https://animalkingdompark.onrender.com";
+  const url = "https://animalkingdomparkbackend.onrender.com";
 
   const [data, setData] = useState([]);
 
