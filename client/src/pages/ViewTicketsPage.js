@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 
 const ViewTicketsPage = () => {
-  const url = "http://localhost:4000/tickets";
+  // const url = "http://localhost:4000/tickets";
+  const url = "https://animalkingdompark.onrender.com";
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {

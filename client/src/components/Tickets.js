@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Axios from "axios";
 
 const Tickets = () => {
-  const url = "http://localhost:4000/tickets";
+  // const url = "http://localhost:4000/tickets";
+  const url = "https://animalkingdompark.onrender.com";
   const [result, setResult] = useState("");
   const [data, setData] = useState({
     fname: "",

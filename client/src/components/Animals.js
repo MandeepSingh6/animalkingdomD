@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 const Animals = () => {
-  const url = "http://localhost:4000/animals";
+  // const url = "http://localhost:4000/animals";
+  const url = "https://animalkingdompark.onrender.com";
+
   const [data, setData] = useState([]);
 
   useEffect(() => {

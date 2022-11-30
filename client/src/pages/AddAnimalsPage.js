@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const AddAnimalsPage = () => {
   const navigate = useNavigate();
-  const url = "http://localhost:4000/animals";
+  // const url = "http://localhost:4000/animals";
+  const url = "https://animalkingdompark.onrender.com";
   const [uploadedImage, setUploadedImage] = useState("");
   const [animal, setAnimal] = useState({
     name: "",
