@@ -104,9 +104,11 @@ const Tickets = () => {
 
         <div>
           <input
+            id = "s-btn"
             type="submit"
             value="Submit"
             className="px-1 bg-white rounded-md mb-2 w-20"
+            onClick = {(e)=>e.target.style.backgroundColor="green"}
           />
           <br />
           <input
