@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 
 const Tickets = () => {
+  const [submitted, setSubmitted] = useState(false);
   // const url = "http://localhost:4000/tickets";
   const url = "https://animalkingdomparkbackend.onrender.com/tickets";
   const [result, setResult] = useState("");
@@ -13,7 +14,9 @@ const Tickets = () => {
     tickets: "",
   });
 
+  console.log(data);
   const submit = (e) => {
+    setSubmitted(true);
     e.preventDefault();
     console.log(data);
     Axios.post(url, {
@@ -26,6 +29,7 @@ const Tickets = () => {
   };
 
   const handleChange = (e) => {
+    setSubmitted(false);
     const newData = { ...data };
     newData[e.target.name] = e.target.value;
     setData(newData);
@@ -43,6 +47,7 @@ const Tickets = () => {
           <label htmlFor="fname">Enter your full name :</label>
           <br />
           <input
+            required
             onChange={(e) => handleChange(e)}
             type="text"
             id="fname"
@@ -55,6 +60,9 @@ const Tickets = () => {
           <label htmlFor="age">Enter your age :</label>
           <br />
           <input
+            required
+            min={14}
+            max={100}
             onChange={(e) => handleChange(e)}
             type="number"
             id="age"
@@ -67,6 +75,7 @@ const Tickets = () => {
           <label htmlFor="email">Enter your email :</label>
           <br />
           <input
+            required
             onChange={(e) => handleChange(e)}
             type="email"
             id="email"
@@ -79,6 +88,9 @@ const Tickets = () => {
           <label htmlFor="phone">Enter your phone number :</label>
           <br />
           <input
+            required
+            minLength={10}
+            maxLength={10}
             onChange={(e) => handleChange(e)}
             type="text"
             id="phone"
@@ -93,6 +105,9 @@ const Tickets = () => {
           </label>
           <br />
           <input
+            required
+            min={1}
+            max={10}
             onChange={(e) => handleChange(e)}
             type="number"
             id="tickets"
@@ -103,18 +118,34 @@ const Tickets = () => {
         </div>
 
         <div>
-          <input
-            type="submit"
-            value="Submit"
-            className="px-1 bg-white rounded-md mb-2 w-20"
-            onClick={(e) => (e.target.style.backgroundColor = "green")}
-          />
+          {!submitted && (
+            <input
+              type="submit"
+              value="Submit"
+              className="px-1 bg-white rounded-md mb-2 w-20"
+            />
+          )}
           <br />
           <input
             type="reset"
             value="Reset"
             className="px-1 bg-white rounded-md w-20"
+            onClick={() => {
+              setSubmitted(false);
+              setData({
+                fname: "",
+                age: "",
+                email: "",
+                phone: "",
+                tickets: "",
+              });
+            }}
           />
+          {submitted && (
+            <p className="text-xl mt-4">
+              Thank you! {data.tickets} ticket(s) Booked.
+            </p>
+          )}
         </div>
       </form>
     </div>
