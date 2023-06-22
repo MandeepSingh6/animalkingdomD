@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import AnimalsAtPark from "../images/animals at park.jpg";
+import { Link } from "react-router-dom";
 
 const Animals = () => {
   // const url = "http://localhost:4000/animals";
@@ -17,17 +19,23 @@ const Animals = () => {
   } else {
     return (
       <div>
-        <h1 className="text-center mt-4 font-bold text-4xl">Animals at Park</h1>
-        <div className="flex justify-around my-8">
-          <div className="grid grid-cols-2 gap-x-28 gap-y-12">
+        <img src={AnimalsAtPark} alt="" className="w-full" />
+        <div className="flex justify-around m-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {data.map((animal, index) => (
-              <div key={index} className="div w-[30vw] border-2 rounded-md">
-                <img className="w-full" src={animal.image} alt="" />
-                <div className="px-4 py-2">
-                  <p className="font-bold text-lg">{animal.name}</p>
-                  <p className="max-w-full text-justify">{animal.desc}</p>
-                </div>
-              </div>
+              <Link
+                to={"/animalDetails/" + animal._id}
+                key={index}
+                className="div rounded-md"
+              >
+                <img
+                  className="w-full aspect-video bg-center min-h-[100%]"
+                  src={animal.image}
+                  alt=""
+                />
+                <p className="font-bold text-lg">{animal.name}</p>
+                {/* <p className="max-w-full text-justify">{animal.desc}</p> */}
+              </Link>
             ))}
           </div>
         </div>

@@ -75,7 +75,9 @@ const AddAnimalsPage = () => {
           value={animal.desc}
         />
         <br />
-        <button className="bg-green-400 px-2 rounded-md">Add Animal</button>
+        <button className="bg-[#579506] px-2 rounded-md text-white">
+          Add Animal
+        </button>
       </form>
       <img src={animal.image} alt="" />
     </div>

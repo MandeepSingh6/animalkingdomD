@@ -12,10 +12,12 @@ import AddImagesPage from "./pages/AddImagesPage";
 import ViewTicketsPage from "./pages/ViewTicketsPage";
 import AdminHomePage from "./pages/AdminHomePage";
 import Footer from "./components/Footer";
+import AnimalDetailsPage from "./pages/AnimalDetailsPage";
+import EventsPage from "./pages/EventsPage";
+import DonationsPage from "./pages/DonationsPage";
 
 const App = () => {
   return (
-//     <BrowserRouter>
     <HashRouter>
       <div className="">
         <Navbar />
@@ -26,17 +28,19 @@ const App = () => {
             <Route path="/animals" element={<AnimalsPage />} />
             <Route path="/tickets" element={<TicketsPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/donate" element={<DonationsPage />} />
 
             <Route path="/admin" element={<AdminHomePage />} />
             <Route path="/addAnimals" element={<AddAnimalsPage />} />
             <Route path="/addImages" element={<AddImagesPage />} />
             <Route path="/viewTickets" element={<ViewTicketsPage />} />
+            <Route path="/animalDetails/:id" element={<AnimalDetailsPage />} />
           </Routes>
         </div>
         <Footer />
       </div>
     </HashRouter>
-//     </BrowserRouter>
   );
 };
 

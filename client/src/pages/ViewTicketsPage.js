@@ -15,17 +15,22 @@ const ViewTicketsPage = () => {
     return <h1>No Ticket Found</h1>;
   } else {
     return (
-      <div className="flex flex-col gap-4 justify-center mt-12">
+      <div className="flex flex-col gap-4 justify-center mt-8 items-center">
+        <h2 className="font-bold text-2xl">Booked Tickets</h2>
         {tickets.map((ticket, index) => (
-          <div className="bg-green-400 w-[70vw] p-4 rounded-md" key={index}>
+          <div
+            className="bg-[#579506] w-[70vw] p-4 rounded-md text-white"
+            key={index}
+          >
             <p>
-              <b>Name</b> <br /> {ticket.fname}
+              Name:
+              <b className="ml-1">{ticket.fname}</b>
             </p>
             <p>
-              <b>Email</b> <br /> {ticket.email}
+              Email:<b className="ml-1"> {ticket.email}</b>
             </p>
             <p>
-              <b>Tickets Booked</b> <br /> {ticket.tickets}
+              Tickets Booked: <b className="ml-1">{ticket.tickets}</b>
             </p>
           </div>
         ))}

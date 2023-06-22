@@ -62,7 +62,9 @@ const AddImagesPage = () => {
           value={images.name}
         />
 
-        <button className="bg-green-400 px-2 rounded-md">Add Image</button>
+        <button className="bg-[#579506] px-2 rounded-md text-white">
+          Add Image
+        </button>
       </form>
       <img src={images.image} alt="" />
     </div>

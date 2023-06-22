@@ -1,24 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-green-400 h-8 flex items-center ">
-        <ul className="flex w-full justify-around">
-          <li className=" font-bold">
-            <Link to={"/"}>Animal Kingdom Park</Link>
+      <Logo />
+      <nav className="bg-[#579506] py-2 flex items-center">
+        <ul className="flex w-full justify-around text-lg text-white">
+          <li className="hover:scale-150 duration-300">
+            <Link to={"/"}>Home</Link>
           </li>
-          <li>
+          <li className="hover:scale-150 duration-300">
             <Link to={"/gallary"}>Gallery</Link>
           </li>
-          <li>
+          <li className="hover:scale-150 duration-300">
             <Link to={"/animals"}>Animals</Link>
           </li>
-          <li>
+          {/* <li className="hover:scale-150 duration-300">
             <Link to={"/tickets"}>Tickets</Link>
-          </li>
-          <li>
+          </li> */}
+          <li className="hover:scale-150 duration-300">
             <Link to={"/login"}>Admin</Link>
           </li>
         </ul>

@@ -10,6 +10,7 @@ const login = require("./routes/loginRoute");
 const images = require("./routes/imagesRoutes");
 const tickets = require("./routes/ticketsRoutes");
 const animals = require("./routes/AnimalsRoutes");
+const donations = require("./routes/donationsRoutes");
 
 app.use(express.json());
 app.use(cors());
@@ -21,6 +22,8 @@ app.use("/images", images);
 app.use("/animals", animals);
 
 app.use("/tickets", tickets);
+
+app.use("/donations", donations);
 
 const start = async () => {
   try {

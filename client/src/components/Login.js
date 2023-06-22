@@ -39,8 +39,9 @@ const Login = () => {
       <section className="flex justify-center">
         <form
           onSubmit={(e) => submit(e)}
-          className="flex flex-col gap-4 items-center bg-green-400 p-12 rounded-md mt-12">
-          <h1 className="text-2xl">Admin Login</h1>
+          className="flex flex-col gap-4 items-center bg-[#579506] p-12 rounded-md mt-12"
+        >
+          <h1 className="text-2xl text-white">Admin Login</h1>
           <input
             onChange={(e) => handleChange(e)}
             value={data.username}
@@ -62,7 +63,7 @@ const Login = () => {
             className="rounded-sm p-2"
           />
 
-          <button className="bg-white cursor-pointer px-4 py-2 rounded-lg">
+          <button className="bg-white cursor-pointer px-4 py-2 rounded-lg hover:scale-110 duration-300">
             Submit
           </button>
           {output && <p>Wrong Username or Password</p>}
