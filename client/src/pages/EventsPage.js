@@ -26,10 +26,10 @@ const EventsPage = () => {
             key={index}
             className="mx-auto bg-red-600 p-4 rounded-full w-[80%] text-white text-lg"
           >
-            <p>{event.name}</p>
+            <p>{event.event}</p>
             <p>
               {event.startDate}
-              {event.startDate !== event.endDate && event.endDate}
+              {event.startDate !== event.endDate && " to " + event.endDate}
             </p>
           </li>
         ))}

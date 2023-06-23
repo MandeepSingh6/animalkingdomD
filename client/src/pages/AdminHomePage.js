@@ -32,6 +32,13 @@ const AdminHomePage = () => {
           </button>
         </Link>
       </div>
+      <div>
+        <Link to={"/donations"}>
+          <button className="hover:bg-green-700 w-[50vw] h-16 bg-[#579506] rounded-md">
+            View Donations
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

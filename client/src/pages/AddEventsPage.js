@@ -13,10 +13,10 @@ const AddEventsPage = () => {
 
   console.log(event);
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    await Axios.post(url, {
-      event: event.name,
+    Axios.post(url, {
+      event: event.event,
       startDate: event.startDate,
       endDate: event.endDate,
     }).then(() => {
@@ -25,9 +25,10 @@ const AddEventsPage = () => {
   };
 
   const handleChange = (e) => {
-    setEvent({ ...event, [e.target.name]: e.target.value });
+    setEvent((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
   };
-
   return (
     <div>
       <form
