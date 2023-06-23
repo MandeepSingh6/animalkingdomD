@@ -3,12 +3,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 const ViewEventsPage = () => {
   // const url = "http://localhost:4000/tickets";
-  const url = "https://animalkingdomparkbackend.onrender.com/events";
+  const url = "https://animalkingdomparkbackend.onrender.com/events/";
   const [events, setEvents] = useState([]);
 
   const handleDelete = (id) => {
-    console.log(url + "/" + id);
-    Axios.delete(url + "/" + id);
+    console.log(url + id);
+    Axios.delete(url + id);
   };
 
   useEffect(() => {

@@ -44,7 +44,7 @@ const deleteEvent = async (req, res) => {
   console.log("del", req);
   try {
     const { id } = req.params;
-    const event = await findByIdAndDelete(id);
+    const event = await Event.findByIdAndDelete(id);
     if (!event) {
       res.send("No event found!");
     } else {
