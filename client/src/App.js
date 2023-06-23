@@ -16,6 +16,7 @@ import AnimalDetailsPage from "./pages/AnimalDetailsPage";
 import EventsPage from "./pages/EventsPage";
 import DonationsPage from "./pages/DonationsPage";
 import AddEventsPage from "./pages/AddEventsPage";
+import ViewDonations from "./pages/ViewDonations";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/addEvents" element={<AddEventsPage />} />
             <Route path="/viewTickets" element={<ViewTicketsPage />} />
             <Route path="/animalDetails/:id" element={<AnimalDetailsPage />} />
+            <Route path="/donations" element={<ViewDonations />} />
           </Routes>
         </div>
         <Footer />

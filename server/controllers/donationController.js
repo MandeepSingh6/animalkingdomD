@@ -16,7 +16,7 @@ const getAllDonations = async (req, res) => {
 
 const createDonation = async (req, res) => {
   try {
-    const donation = await Ticket.create(req.body);
+    const donation = await Donation.create(req.body);
     res.send(donation);
   } catch (error) {
     res.send(error.message);
