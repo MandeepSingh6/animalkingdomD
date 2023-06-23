@@ -6,23 +6,27 @@ const AddEventsPage = () => {
   const navigate = useNavigate();
   const url = "https://animalkingdomparkbackend.onrender.com/events";
   const [event, setEvent] = useState({
-    name: "1",
-    startDate: "1",
-    endDate: "1",
+    event: "",
+    startDate: "",
+    endDate: "",
   });
 
-  const onSubmit = (e) => {
+  console.log(event);
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-    Axios.post(url, {
-      name: event.name,
+    await Axios.post(url, {
+      event: event.name,
       startDate: event.startDate,
       endDate: event.endDate,
-    }).then(() => navigate("/events"));
+    }).then(() => {
+      navigate("/events");
+    });
   };
 
-  //   const handleChange = (e)=>{
-  //     const
-  //   }
+  const handleChange = (e) => {
+    setEvent({ ...event, [e.target.name]: e.target.value });
+  };
 
   return (
     <div>
@@ -35,11 +39,16 @@ const AddEventsPage = () => {
           Add New Upcoming Event
         </h2>
         <div className="flex flex-col [&>*]:border-2 [&>*]:p-1 [&>*]:mb-6">
-          <input type="text" placeholder="Event" />
+          <input
+            type="text"
+            placeholder="Event"
+            name="event"
+            onChange={handleChange}
+          />
           Start Date
-          <input type="date" placeholder="Start Date" name="" id="startDate" />
+          <input type="date" name="startDate" onChange={handleChange} />
           End Date
-          <input type="date" name="" id="" />
+          <input type="date" name="endDate" onChange={handleChange} />
         </div>
 
         <input

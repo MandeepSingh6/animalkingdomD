@@ -7,7 +7,10 @@ const EventsPage = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    Axios.get(url).then((res) => setEvents(res.data));
+    Axios.get(url).then((res) => {
+      console.log(res.data);
+      setEvents(res.data);
+    });
   }, []);
 
   if (events.length < 1) {
@@ -18,8 +21,11 @@ const EventsPage = () => {
     <div>
       <img src={Events} alt="" className="w-full" />
       <ul className="flex mt-4">
-        {events.map((event) => (
-          <li className="mx-auto bg-red-600 p-4 rounded-full w-[80%] text-white text-lg">
+        {events.map((event, index) => (
+          <li
+            key={index}
+            className="mx-auto bg-red-600 p-4 rounded-full w-[80%] text-white text-lg"
+          >
             <p>{event.name}</p>
             <p>
               {event.startDate}
