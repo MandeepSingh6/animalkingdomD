@@ -5,7 +5,7 @@ const DonationsPage = () => {
   return (
     <div>
       <div className="relative">
-        <img src={Donate} alt="" />
+        <img src={Donate} alt="" className="w-full" />
         <span className="absolute bottom-1 md:bottom-4 right-10 text-white sm:text-[2rem] md:text-[3rem] font-extrabold">
           DONATE NOW
         </span>

@@ -14,7 +14,7 @@ const AnimalDetailsPage = () => {
   return (
     <div className="md:flex mx-auto p-2 gap-4">
       <img
-        className="w-full md:max-w-[60vw]"
+        className="w-full md:max-w-[60vw] aspect-video"
         src={animalDetails.image}
         alt=""
       />

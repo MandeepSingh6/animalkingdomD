@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import AnimalDetailsPage from "./pages/AnimalDetailsPage";
 import EventsPage from "./pages/EventsPage";
 import DonationsPage from "./pages/DonationsPage";
+import AddEventsPage from "./pages/AddEventsPage";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/admin" element={<AdminHomePage />} />
             <Route path="/addAnimals" element={<AddAnimalsPage />} />
             <Route path="/addImages" element={<AddImagesPage />} />
+            <Route path="/addEvents" element={<AddEventsPage />} />
             <Route path="/viewTickets" element={<ViewTicketsPage />} />
             <Route path="/animalDetails/:id" element={<AnimalDetailsPage />} />
           </Routes>

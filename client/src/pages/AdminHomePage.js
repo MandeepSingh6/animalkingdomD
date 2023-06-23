@@ -19,6 +19,13 @@ const AdminHomePage = () => {
         </Link>
       </div>
       <div>
+        <Link to={"/addEvents"}>
+          <button className="hover:bg-green-700 w-[50vw] h-16 bg-[#579506] rounded-md">
+            Add New Events
+          </button>
+        </Link>
+      </div>
+      <div>
         <Link to={"/viewTickets"}>
           <button className="hover:bg-green-700 w-[50vw] h-16 bg-[#579506] rounded-md">
             View Booked Tickets
