@@ -15,6 +15,7 @@ const getAllEvents = async (req, res) => {
 
 const createEvent = async (req, res) => {
   try {
+    console.log("entered create Event", req.body);
     const event = await Event.create(req.body);
     res.send(event);
   } catch (error) {
