@@ -20,7 +20,7 @@ const EventsPage = () => {
   return (
     <div>
       <img src={Events} alt="" className="w-full" />
-      <ul className="flex mt-4">
+      <ul className="flex flex-col gap-4 mt-4">
         {events.map((event, index) => (
           <li
             key={index}

@@ -17,11 +17,8 @@ const Navbar = () => {
           <li className="hover:scale-150 duration-300">
             <Link to={"/animals"}>Animals</Link>
           </li>
-          {/* <li className="hover:scale-150 duration-300">
-            <Link to={"/tickets"}>Tickets</Link>
-          </li> */}
           <li className="hover:scale-150 duration-300">
-            <Link to={"/login"}>Admin</Link>
+            <Link to={"/admin"}>Admin</Link>
           </li>
         </ul>
       </nav>

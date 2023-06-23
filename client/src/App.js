@@ -6,7 +6,6 @@ import HomePage from "./pages/HomePage";
 import GallaryPage from "./pages/GallaryPage";
 import AnimalsPage from "./pages/AnimalsPage";
 import TicketsPage from "./pages/TicketsPage";
-import LoginPage from "./pages/LoginPage";
 import AddAnimalsPage from "./pages/AddAnimalsPage";
 import AddImagesPage from "./pages/AddImagesPage";
 import ViewTicketsPage from "./pages/ViewTicketsPage";
@@ -17,6 +16,7 @@ import EventsPage from "./pages/EventsPage";
 import DonationsPage from "./pages/DonationsPage";
 import AddEventsPage from "./pages/AddEventsPage";
 import ViewDonations from "./pages/ViewDonations";
+import ViewEventsPage from "./pages/ViewEventsPage";
 
 const App = () => {
   return (
@@ -29,7 +29,6 @@ const App = () => {
             <Route path="/gallary" element={<GallaryPage />} />
             <Route path="/animals" element={<AnimalsPage />} />
             <Route path="/tickets" element={<TicketsPage />} />
-            <Route path="/login" element={<LoginPage />} />
             <Route path="/events" element={<EventsPage />} />
             <Route path="/donate" element={<DonationsPage />} />
 
@@ -40,6 +39,7 @@ const App = () => {
             <Route path="/viewTickets" element={<ViewTicketsPage />} />
             <Route path="/animalDetails/:id" element={<AnimalDetailsPage />} />
             <Route path="/donations" element={<ViewDonations />} />
+            <Route path="/viewEvents" element={<ViewEventsPage />} />
           </Routes>
         </div>
         <Footer />

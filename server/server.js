@@ -16,8 +16,6 @@ const events = require("./routes/EventsRoute");
 app.use(express.json());
 app.use(cors());
 
-app.use("/login", login);
-
 app.use("/images", images);
 
 app.use("/animals", animals);

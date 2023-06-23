@@ -41,6 +41,7 @@ const updateEvent = async (req, res) => {
 };
 
 const deleteEvent = async (req, res) => {
+  console.log("del", req);
   try {
     const { id } = req.params;
     const event = await findByIdAndDelete(id);
