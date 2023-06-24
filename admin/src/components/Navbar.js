@@ -17,7 +17,7 @@ const Navbar = () => {
           <li className="hover:scale-150 duration-300">
             <Link to={"/animals"}>Animals</Link>
           </li>
-          <li className="hover:scale-150 duration-300 text-2xl text-[#440695]">
+          <li className="hover:scale-150 duration-300 text-[#440695]">
             <Link to={"/admin"}>Admin</Link>
           </li>
         </ul>
