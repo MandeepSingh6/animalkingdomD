@@ -1,0 +1,44 @@
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
+
+const Gallary = () => {
+  // const url = "http://localhost:4000/images";
+  const url = "https://animalkingdomparkbackend.onrender.com/images";
+
+  const [images, setImages] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    Axios.get(url).then((res) => setImages(res.data));
+  }, []);
+  console.log(images);
+  if (images.includes("No image Found")) {
+    return <h1>No Image Found</h1>;
+  } else {
+    return (
+      <div>
+        {images.length > 0 && (
+          <div>
+            <img
+              src={images[currentIndex].image}
+              alt=""
+              className="h-[50vh] aspect-video mx-auto mt-4"
+            />
+          </div>
+        )}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              className="w-full aspect-video bg-cover bg-center bg-no-repeat hover:scale-105 duration-200"
+              src={image.image}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+};
+
+export default Gallary;

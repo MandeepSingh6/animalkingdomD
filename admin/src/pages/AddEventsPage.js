@@ -41,15 +41,21 @@ const AddEventsPage = () => {
         </h2>
         <div className="flex flex-col [&>*]:border-2 [&>*]:p-1 [&>*]:mb-6">
           <input
+            required
             type="text"
             placeholder="Event"
             name="event"
             onChange={handleChange}
           />
           Start Date
-          <input type="date" name="startDate" onChange={handleChange} />
+          <input
+            required
+            type="date"
+            name="startDate"
+            onChange={handleChange}
+          />
           End Date
-          <input type="date" name="endDate" onChange={handleChange} />
+          <input required type="date" name="endDate" onChange={handleChange} />
         </div>
 
         <input

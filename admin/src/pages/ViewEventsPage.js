@@ -7,14 +7,15 @@ const ViewEventsPage = () => {
   const [events, setEvents] = useState([]);
 
   const handleDelete = (id) => {
-    console.log(url + id);
     Axios.delete(url + id);
+    Axios.get(url).then((res) => setEvents(res.data));
   };
 
   useEffect(() => {
     Axios.get(url).then((res) => setEvents(res.data));
   }, []);
-  if (events.length < 1) {
+
+  if (events.length < 1 || events[0].hasOwnProperty("event") === false) {
     return <h1>No Events Found</h1>;
   } else {
     return (
