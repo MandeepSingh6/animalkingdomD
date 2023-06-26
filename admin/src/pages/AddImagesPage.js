@@ -53,7 +53,7 @@ const AddImagesPage = () => {
         <br />
         <input
           onChange={(e) => handleChange(e)}
-          className="border-2"
+          className="border-2 px-1"
           placeholder="name"
           type="text"
           name="name"
@@ -61,7 +61,7 @@ const AddImagesPage = () => {
           required
           value={images.name}
         />
-
+        <br />
         <button className="bg-[#579506] px-2 rounded-md text-white">
           Add Image
         </button>

@@ -55,7 +55,7 @@ const AddAnimalsPage = () => {
         <br />
         <input
           onChange={(e) => handleChange(e)}
-          className="border-2"
+          className="border-2 px-1"
           placeholder="name"
           type="text"
           name="name"
@@ -66,7 +66,7 @@ const AddAnimalsPage = () => {
         <br />
         <input
           onChange={(e) => handleChange(e)}
-          className="border-2"
+          className="border-2 px-1"
           placeholder="description"
           type="text"
           name="desc"
