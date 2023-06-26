@@ -6,12 +6,15 @@ const ManageAnimals = () => {
   const [animals, setAnimals] = useState([]);
 
   const handleDelete = (id) => {
-    Axios.delete(url + id);
-    Axios.get(url).then((res) => setAnimals(res.data));
+    Axios.delete(url + id).then(() =>
+      Axios.get(url).then((res) => setAnimals(res.data))
+    );
   };
 
   useEffect(() => {
-    Axios.get(url).then((res) => setAnimals(res.data));
+    Axios.get(url).then((res) => {
+      setAnimals(res.data);
+    });
   }, []);
 
   if (animals.includes("No animal Found")) {
@@ -29,7 +32,7 @@ const ManageAnimals = () => {
           >
             <p className="flex justify-between">
               <b className="ml-1">{animal.name}</b>
-              <button onClick={() => handleDelete(animals._id)}>Delete</button>
+              <button onClick={() => handleDelete(animal._id)}>Delete</button>
             </p>
           </div>
         ))}
@@ -38,4 +41,4 @@ const ManageAnimals = () => {
   }
 };
 
-export default ViewEventsPage;
+export default ManageAnimals;

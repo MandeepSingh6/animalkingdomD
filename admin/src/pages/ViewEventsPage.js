@@ -7,16 +7,20 @@ const ViewEventsPage = () => {
   const [events, setEvents] = useState([]);
 
   const handleDelete = (id) => {
-    Axios.delete(url + id);
-    Axios.get(url).then((res) => setEvents(res.data));
+    Axios.delete(url + id).then(() =>
+      Axios.get(url).then((res) => setEvents(res.data))
+    );
   };
 
   useEffect(() => {
     Axios.get(url).then((res) => setEvents(res.data));
   }, []);
 
-  if (events.length < 1 || events[0].hasOwnProperty("event") === false) {
-    return <h1>No Events Found</h1>;
+  if (events.length < 1) {
+    return <h2 className="text-2xl text-center mt-8">Loading...</h2>;
+  }
+  if (events[0].hasOwnProperty("event") === false) {
+    return <h2 className="text-2xl text-center mt-8">No Upcoming Events!</h2>;
   } else {
     return (
       <div className="flex flex-col gap-4 justify-center mt-8 items-center">

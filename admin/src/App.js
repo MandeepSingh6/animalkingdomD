@@ -17,6 +17,8 @@ import DonationsPage from "./pages/DonationsPage";
 import AddEventsPage from "./pages/AddEventsPage";
 import ViewDonations from "./pages/ViewDonations";
 import ViewEventsPage from "./pages/ViewEventsPage";
+import ManageAnimals from "./pages/ManageAnimals";
+import ManageGallary from "./pages/ManageGallary";
 
 const App = () => {
   return (
@@ -40,6 +42,8 @@ const App = () => {
             <Route path="/animalDetails/:id" element={<AnimalDetailsPage />} />
             <Route path="/donations" element={<ViewDonations />} />
             <Route path="/viewEvents" element={<ViewEventsPage />} />
+            <Route path="/manageAnimals" element={<ManageAnimals />} />
+            <Route path="/manageGallary" element={<ManageGallary />} />
           </Routes>
         </div>
         <Footer />

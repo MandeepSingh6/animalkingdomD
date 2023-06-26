@@ -46,6 +46,20 @@ const AdminHomePage = () => {
           </button>
         </Link>
       </div>
+      <div>
+        <Link to={"/manageAnimals"}>
+          <button className="hover:bg-green-700 w-[50vw] h-16 bg-[#579506] rounded-md">
+            Manage Animals
+          </button>
+        </Link>
+      </div>
+      <div>
+        <Link to={"/manageGallary"}>
+          <button className="hover:bg-green-700 w-[50vw] h-16 bg-[#579506] rounded-md">
+            Manage Gallary
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

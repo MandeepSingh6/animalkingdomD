@@ -6,8 +6,9 @@ const ManageGallary = () => {
   const [images, setImages] = useState([]);
 
   const handleDelete = (id) => {
-    Axios.delete(url + id);
-    Axios.get(url).then((res) => setImages(res.data));
+    Axios.delete(url + id).then(() =>
+      Axios.get(url).then((res) => setImages(res.data))
+    );
   };
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const ManageGallary = () => {
             key={index}
           >
             <p className="flex justify-between">
-              <img src={image.image} alt="" />
+              <img src={image.image} alt="" className="w-[40%] aspect-video" />
               <button onClick={() => handleDelete(image._id)}>Delete</button>
             </p>
           </div>
@@ -38,4 +39,4 @@ const ManageGallary = () => {
   }
 };
 
-export default ViewEventsPage;
+export default ManageGallary;

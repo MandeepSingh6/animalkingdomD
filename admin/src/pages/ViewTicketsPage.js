@@ -7,8 +7,9 @@ const ViewTicketsPage = () => {
   const [tickets, setTickets] = useState([]);
 
   const handleDelete = (id) => {
-    Axios.delete(url + id);
-    Axios.get(url).then((res) => setTickets(res.data));
+    Axios.delete(url + id).then(() =>
+      Axios.get(url).then((res) => setTickets(res.data))
+    );
   };
 
   useEffect(() => {
@@ -28,17 +29,21 @@ const ViewTicketsPage = () => {
             className="bg-[#579506] w-[70vw] p-4 rounded-md text-white"
             key={index}
           >
-            <p>
-              Name:
-              <b className="ml-1">{ticket.fname}</b>
-            </p>
-            <p>
-              Email:<b className="ml-1"> {ticket.email}</b>
-            </p>
-            <p>
-              Tickets Booked: <b className="ml-1">{ticket.tickets}</b>
-            </p>
-            <button onClick={() => handleDelete(ticket._id)}>Delete</button>
+            <div className="flex justify-between">
+              <div>
+                <p>
+                  Name:
+                  <b className="ml-1">{ticket.fname}</b>
+                </p>
+                <p>
+                  Email:<b className="ml-1"> {ticket.email}</b>
+                </p>
+                <p>
+                  Tickets Booked: <b className="ml-1">{ticket.tickets}</b>
+                </p>
+              </div>
+              <button onClick={() => handleDelete(ticket._id)}>Delete</button>
+            </div>
           </div>
         ))}
       </div>
