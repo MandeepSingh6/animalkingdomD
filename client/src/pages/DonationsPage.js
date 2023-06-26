@@ -8,7 +8,7 @@ const DonationsPage = () => {
 
   const [donationDetails, setDonationDetails] = useState({
     name: "",
-    amount: 0,
+    amount: Number,
     email: "",
     phone: 0,
     address: "",
@@ -20,7 +20,7 @@ const DonationsPage = () => {
   };
 
   const handleChange = (e) => {
-    console.log("first");
+    e.preventDefault();
     setDonationDetails((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
@@ -77,15 +77,16 @@ const DonationsPage = () => {
               $200
             </button>
           </div>
-          <div>
-            <button className="border-2 p-1">$</button>
+          <div className="w-full">
+            <span className="">Custom Amount:</span>
+            <br />
             <input
               required
               value={donationDetails.amount}
               name="amount"
               type="number"
-              placeholder="Custom amount"
-              className="border-2 border-l-0 p-1 mb-2"
+              placeholder="$0"
+              className="border-2 p-1 mb-2"
               onChange={handleChange}
             />
           </div>

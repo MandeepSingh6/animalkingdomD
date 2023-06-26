@@ -3,16 +3,22 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 
 const ViewTicketsPage = () => {
-  // const url = "http://localhost:4000/tickets";
   const url = "https://animalkingdomparkbackend.onrender.com/tickets";
   const [tickets, setTickets] = useState([]);
+
+  const handleDelete = (id) => {
+    Axios.delete(url + id);
+    Axios.get(url).then((res) => setTickets(res.data));
+  };
 
   useEffect(() => {
     Axios.get(url).then((res) => setTickets(res.data));
   }, []);
-  console.log(tickets);
   if (tickets.includes("No Ticket Found")) {
-    return <h1>No Ticket Found</h1>;
+    return <h1 className="text-2xl text-center mt-8">No Tickets Found</h1>;
+  }
+  if (tickets.length < 1) {
+    return <h1 className="text-2xl text-center mt-8">Loading...</h1>;
   } else {
     return (
       <div className="flex flex-col gap-4 justify-center mt-8 items-center">
@@ -32,6 +38,7 @@ const ViewTicketsPage = () => {
             <p>
               Tickets Booked: <b className="ml-1">{ticket.tickets}</b>
             </p>
+            <button onClick={() => handleDelete(ticket._id)}>Delete</button>
           </div>
         ))}
       </div>

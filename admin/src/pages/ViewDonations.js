@@ -7,14 +7,21 @@ const ViewDonations = () => {
 
   const [donations, setDonations] = useState();
 
+  const handleDelete = (id) => {
+    Axios.delete(url + id);
+    Axios.get(url).then((res) => setDonations(res.data));
+  };
+
   useEffect(() => {
     Axios.get(url).then((res) => {
-      console.log(res);
       setDonations(res.data);
     });
   }, []);
-  if (donations === "No Donations Found" || !donations) {
-    return <h2>No Donations found!</h2>;
+  if (donations.includes("No Donations Found")) {
+    return <h1 className="text-2xl text-center mt-8">No Image Found</h1>;
+  }
+  if (donations.length < 1) {
+    return <h1 className="text-2xl text-center mt-8">Loading...</h1>;
   } else
     return (
       <div className="flex flex-col gap-4 justify-center mt-8 items-center">
@@ -34,6 +41,7 @@ const ViewDonations = () => {
             <p>
               Donated Amount: <b className="ml-1">{donation.amount}</b>
             </p>
+            <button onClick={() => handleDelete(donation._id)}>Delete</button>
           </div>
         ))}
       </div>

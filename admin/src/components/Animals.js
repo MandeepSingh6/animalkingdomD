@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const Animals = () => {
   const url = "https://animalkingdomparkbackend.onrender.com/animals";
-
   const [data, setData] = useState([]);
-
   useEffect(() => {
     Axios.get(url).then((res) => setData(res.data));
   }, []);
