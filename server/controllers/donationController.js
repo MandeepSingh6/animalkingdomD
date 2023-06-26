@@ -56,7 +56,7 @@ const updateDonation = async (req, res) => {
 const deleteDonation = async (req, res) => {
   try {
     const { id } = req.params;
-    const donation = Donation.findByIdAndDelete(id);
+    const donation = await Donation.findByIdAndDelete(id);
     if (!donation) {
       res.send("No Donation Found!");
     } else {

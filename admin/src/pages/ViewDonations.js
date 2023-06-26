@@ -3,11 +3,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const ViewDonations = () => {
-  const url = "https://animalkingdomparkbackend.onrender.com/donations";
+  const url = "https://animalkingdomparkbackend.onrender.com/donations/";
 
-  const [donations, setDonations] = useState();
+  const [donations, setDonations] = useState([]);
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     Axios.delete(url + id);
     Axios.get(url).then((res) => setDonations(res.data));
   };
@@ -17,11 +17,11 @@ const ViewDonations = () => {
       setDonations(res.data);
     });
   }, []);
-  if (donations.includes("No Donations Found")) {
-    return <h1 className="text-2xl text-center mt-8">No Image Found</h1>;
-  }
   if (donations.length < 1) {
     return <h1 className="text-2xl text-center mt-8">Loading...</h1>;
+  }
+  if (donations.includes("No donations Found")) {
+    return <h1 className="text-2xl text-center mt-8">No Image Found</h1>;
   } else
     return (
       <div className="flex flex-col gap-4 justify-center mt-8 items-center">
