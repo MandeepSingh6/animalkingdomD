@@ -3,7 +3,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const connectionUrl = process.env.connection_url;
-// const connectionUrl = "mongodb://localhost:27017/AnimalKingdomPark";
 const port = 4000;
 const cors = require("cors");
 const login = require("./routes/loginRoute");
