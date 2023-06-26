@@ -12,10 +12,12 @@ const EventsPage = () => {
     });
   }, []);
 
-  if (events.length < 1 || events[0].hasOwnProperty("event") === false) {
-    return <h2>No Upcoming Events</h2>;
+  if (events.length < 1) {
+    return <h2 className="text-2xl text-center mt-8">Loading...</h2>;
   }
-
+  if (events[0].hasOwnProperty("event") === false) {
+    return <h2 className="text-2xl text-center mt-8">No Upcoming Events!</h2>;
+  }
   return (
     <div>
       <img src={Events} alt="" className="w-full" />

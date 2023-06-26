@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 const Gallary = () => {
-  // const url = "http://localhost:4000/images";
   const url = "https://animalkingdomparkbackend.onrender.com/images";
 
   const [images, setImages] = useState([]);
@@ -11,9 +10,12 @@ const Gallary = () => {
   useEffect(() => {
     Axios.get(url).then((res) => setImages(res.data));
   }, []);
-  console.log(images);
+
   if (images.includes("No image Found")) {
-    return <h1>No Image Found</h1>;
+    return <h1 className="text-2xl text-center mt-8">No Image Found</h1>;
+  }
+  if (images.length < 1) {
+    return <h1 className="text-2xl text-center mt-8">Loading...</h1>;
   } else {
     return (
       <div>

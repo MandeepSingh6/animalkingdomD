@@ -4,7 +4,6 @@ import AnimalsAtPark from "../images/animals at park.jpg";
 import { Link } from "react-router-dom";
 
 const Animals = () => {
-  // const url = "http://localhost:4000/animals";
   const url = "https://animalkingdomparkbackend.onrender.com/animals";
 
   const [data, setData] = useState([]);
@@ -12,10 +11,12 @@ const Animals = () => {
   useEffect(() => {
     Axios.get(url).then((res) => setData(res.data));
   }, []);
-  console.log(data);
 
   if (data.includes("No animal Found")) {
-    return <h1>No Animal Found</h1>;
+    return <h1 className="text-2xl text-center mt-8">No Animal Found!</h1>;
+  }
+  if (data.length < 1) {
+    return <h1 className="text-2xl text-center mt-8">Loading...</h1>;
   } else {
     return (
       <div>
