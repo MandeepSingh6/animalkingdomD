@@ -7,21 +7,27 @@ const AdminHomePage = () => {
       <div>
         <Link to={"/addAnimals"}>
           <button className="hover:bg-green-700  w-[50vw] h-16 bg-[#579506] rounded-md">
-            Add New Animals
+            Add New Animals <br />
+            Limited Access(You can't upload files or give unique name for
+            security purpose)
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/addImages"}>
           <button className="hover:bg-green-700 w-[50vw] h-16 bg-[#579506] rounded-md">
-            Add New Gallery Images
+            Add New Gallery Images <br />
+            Limited Access(You can't upload files or give unique name for
+            security purpose)
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/addEvents"}>
           <button className="hover:bg-green-700 w-[50vw] h-16 bg-[#579506] rounded-md">
-            Add New Events
+            Add New Events <br />
+            Limited Access(You can't upload files or give unique name for
+            security purpose)
           </button>
         </Link>
       </div>

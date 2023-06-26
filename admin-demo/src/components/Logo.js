@@ -8,7 +8,7 @@ const Logo = () => {
         <img src={logo} alt="logo" className="w-[10rem] sm:w-[15rem]" />
       </Link>
       <div>
-        <h2 className="text-green-700">Administrative Access</h2>
+        <h2 className="text-green-700">Administrative Access(Demo)</h2>
         <a
           className="text-red-600"
           href="https://animalkingdompark.onrender.com/"
