@@ -11,7 +11,7 @@ const HomePage = () => {
     <div>
       <Slider />
 
-      <div className="mt-6 [&>*]:w-[110px] [&>*]:h-[110px] [&>*]:duration-300 [&>*]:p-2  [&>*]:rounded-full [&>*]:bg-[#579506] [&>*]:flex [&>*]:relative [&>*]:items-center [&>*]:justify-center flex justify-around">
+      <div className="mt-6 [&>*]:w-[90px] [&>*]:h-[90px] sm:[&>*]:w-[110px] sm:[&>*]:h-[110px] [&>*]:duration-300 [&>*]:p-2  [&>*]:rounded-full [&>*]:bg-[#579506] [&>*]:flex [&>*]:relative [&>*]:items-center [&>*]:justify-center flex justify-around">
         <Link to={"/events"} className="hover:scale-110 ">
           <img src={Events} alt="Events" className="max-w-[80%]" />
           <p className="absolute bottom-0 translate-y-[100%] text-lg">Events</p>

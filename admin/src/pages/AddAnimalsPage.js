@@ -43,7 +43,10 @@ const AddAnimalsPage = () => {
   return (
     <div className="text-center mt-12">
       <h1 className="mb-8 text-xl font-bold">ADD NEW ANIMAL</h1>
-      <form onSubmit={(e) => submit(e)} className="leading-8 space-y-4">
+      <form
+        onSubmit={(e) => submit(e)}
+        className="leading-8 space-y-4 [&>*]:w-[90%] md:[&>*]:w-[70%]"
+      >
         <input
           onChange={(e) => uploadImage(e.target.files)}
           className="border-2"
@@ -78,7 +81,7 @@ const AddAnimalsPage = () => {
           Add Animal
         </button>
       </form>
-      <img src={animal.image} alt="" />
+      <img src={animal.image} alt="" className="mx-auto" />
     </div>
   );
 };

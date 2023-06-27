@@ -24,7 +24,7 @@ const Gallary = () => {
             <img
               src={images[currentIndex].image}
               alt=""
-              className="h-[50vh] aspect-video mx-auto mt-4"
+              className="aspect-video mx-auto mt-4 w-full md:w-[70%]"
             />
           </div>
         )}

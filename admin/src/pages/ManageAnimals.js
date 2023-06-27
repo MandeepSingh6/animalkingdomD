@@ -27,7 +27,7 @@ const ManageAnimals = () => {
       <div className="flex flex-col gap-4 justify-center mt-8 items-center">
         {animals.map((animal, index) => (
           <div
-            className="bg-[#579506] w-[70vw] p-4 rounded-md text-white"
+            className="bg-[#579506] w-[90vw] md:w-[70vw] p-2 px-1 rounded-md text-white"
             key={index}
           >
             <p className="flex justify-between">

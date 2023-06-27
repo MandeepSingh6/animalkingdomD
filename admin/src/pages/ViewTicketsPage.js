@@ -26,7 +26,7 @@ const ViewTicketsPage = () => {
         <h2 className="font-bold text-2xl">Booked Tickets</h2>
         {tickets.map((ticket, index) => (
           <div
-            className="bg-[#579506] w-[70vw] p-4 rounded-md text-white"
+            className="bg-[#579506] w-[80vw] md:w-[70vw] p-4 rounded-md text-white"
             key={index}
           >
             <div className="flex justify-between">

@@ -34,7 +34,7 @@ const AddEventsPage = () => {
       <form
         action=""
         onSubmit={onSubmit}
-        className="w-[90%] sm:w-[80%] md:w-[50%] lg:w-[30%] border-2 mx-auto mt-16 p-8 "
+        className="w-[90%] sm:w-[80%] md:w-[50%] lg:w-[30%] border-2 mx-auto mt-16 p-2 "
       >
         <h2 className="mb-4 text-center font-extrabold text-lg">
           Add New Upcoming Event

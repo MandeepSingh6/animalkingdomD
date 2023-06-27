@@ -3,65 +3,62 @@ import { Link } from "react-router-dom";
 
 const AdminHomePage = () => {
   return (
-    <div className="flex flex-col gap-y-12 mt-16 items-center text-white ">
+    <div className="flex flex-col gap-y-6 md:gap-y-12 mt-6 md:mt-16 items-center text-white ">
       <div>
         <Link to={"/addAnimals"}>
-          <button className="hover:bg-green-700  w-[60vw] h-18 lg:h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-18 lg:h-16 bg-[#579506] rounded-md">
             Add New Animals <br />
-            Limited Access(Visitors can't upload files or give unique name for
-            security purposes)
+            Limited Access(Visitors can't add new animals)
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/addImages"}>
-          <button className="hover:bg-green-700 w-[60vw] h-18 lg:h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-18 lg:h-16 bg-[#579506] rounded-md">
             Add New Gallery Images <br />
-            Limited Access(Visitors can't upload files or give unique name for
-            security purposes)
+            Limited Access(Visitors can't upload images)
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/addEvents"}>
-          <button className="hover:bg-green-700 w-[60vw] h-18 lg:h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-18 lg:h-16 bg-[#579506] rounded-md">
             Add New Events <br />
-            Limited Access(Visitor can't upload files or give unique name for
-            security purposes)
+            Limited Access(Visitors can't add new events)
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/viewTickets"}>
-          <button className="hover:bg-green-700 w-[60vw] h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-16 bg-[#579506] rounded-md">
             Manage Booked Tickets
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/viewEvents"}>
-          <button className="hover:bg-green-700 w-[60vw] h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-16 bg-[#579506] rounded-md">
             Manage Events
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/donations"}>
-          <button className="hover:bg-green-700 w-[60vw] h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-16 bg-[#579506] rounded-md">
             Manage Donations
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/manageAnimals"}>
-          <button className="hover:bg-green-700 w-[60vw] h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-16 bg-[#579506] rounded-md">
             Manage Animals
           </button>
         </Link>
       </div>
       <div>
         <Link to={"/manageGallary"}>
-          <button className="hover:bg-green-700 w-[60vw] h-16 bg-[#579506] rounded-md">
+          <button className="hover:bg-green-700 w-[90vw] md:w-[60vw] h-16 bg-[#579506] rounded-md">
             Manage Gallary
           </button>
         </Link>

@@ -30,11 +30,13 @@ const AddImagesPage = () => {
   return (
     <div className="text-center mt-12">
       <h1 className="mb-8 text-xl font-bold">
-        ADD NEW IMAGE TO GALLERY <br /> (Your file will not be uploaded due to
-        security concerns) <br /> Instead default file and name will be
-        uploaded.
+        ADD NEW IMAGE TO GALLERY <br /> (Visitors can't upload file in this
+        Demo) <br /> Instead default file and name will be uploaded.
       </h1>
-      <form onSubmit={(e) => submit(e)} className="leading-8 space-y-4">
+      <form
+        onSubmit={(e) => submit(e)}
+        className="leading-8 space-y-4 [&>*]:w-[80%] md:[&>*]:w-[60%]"
+      >
         <input
           onChange={(e) => {
             uploadImage(e.target.files);
@@ -60,7 +62,7 @@ const AddImagesPage = () => {
           Add Image
         </button>
       </form>
-      <img src={images.image} alt="" />
+      <img src={images.image} alt="" className="mx-auto" />
     </div>
   );
 };

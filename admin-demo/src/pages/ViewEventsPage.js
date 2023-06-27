@@ -26,19 +26,13 @@ const ViewEventsPage = () => {
         <h2 className="font-bold text-2xl">Upcoming Events</h2>
         {events.map((event, index) => (
           <div
-            className="bg-[#579506] w-[70vw] p-4 rounded-md text-white"
+            className="bg-[#579506] w-[90vw]  md:w-[70vw] p-2 px-1 rounded-md text-white"
             key={index}
           >
             <p className="flex justify-between">
               <b className="ml-1">{event.event}</b>
               <button onClick={() => handleDelete(event._id)}>Delete</button>
             </p>
-            {/* <p>
-              Email:<b className="ml-1"> {ticket.email}</b>
-            </p>
-            <p>
-              Tickets Booked: <b className="ml-1">{ticket.tickets}</b>
-            </p> */}
           </div>
         ))}
       </div>

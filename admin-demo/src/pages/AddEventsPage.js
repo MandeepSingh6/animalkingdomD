@@ -6,7 +6,7 @@ const AddEventsPage = () => {
   const navigate = useNavigate();
   const url = "https://animalkingdomparkbackend.onrender.com/events";
   const [event, setEvent] = useState({
-    event: "Test Event",
+    event: "Test Event(Website Visitor)",
     startDate: "",
     endDate: "",
   });
@@ -29,7 +29,7 @@ const AddEventsPage = () => {
       return {
         ...prev,
         [e.target.name]: e.target.value,
-        event: "Test Event (Website visitor)",
+        event: "Test Event(Website Visitor)",
       };
     });
   };
@@ -38,11 +38,11 @@ const AddEventsPage = () => {
       <form
         action=""
         onSubmit={onSubmit}
-        className="w-[90%] sm:w-[80%] md:w-[50%] lg:w-[30%] border-2 mx-auto mt-16 p-8 "
+        className="w-[90%] sm:w-[80%] md:w-[50%] lg:w-[30%] border-2 mx-auto mt-16 p-2 "
       >
-        <h2 className="mb-4 text-center font-extrabold text-lg">
-          Add New Upcoming Event <br /> (Your event will not be uploaded due to
-          security concerns) <br /> Instead default Event will be added.
+        <h2 className="mb-4 text-center font-extrabold text-lg  max-sm:text-[1.1rem]">
+          Add New Upcoming Event <br /> (Visitors can't add new event, <br />
+          Instead default Event will be added.)
         </h2>
         <div className="flex flex-col [&>*]:border-2 [&>*]:p-1 [&>*]:mb-6">
           <input

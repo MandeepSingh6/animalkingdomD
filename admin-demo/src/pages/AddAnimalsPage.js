@@ -7,10 +7,10 @@ const AddAnimalsPage = () => {
   const url = "https://animalkingdomparkbackend.onrender.com/animals";
   const [uploadedImage, setUploadedImage] = useState("");
   const [animal, setAnimal] = useState({
-    name: "Test Image(Website Visitor)",
+    name: "Test Animal(Website Visitor)",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/1200px-Test-Logo.svg.png",
-    desc: "For security reason you can't upload file, only this file can be uploaded to test the functinality.",
+    desc: "Visitors can't add description, default description will be uploaded to check the functinality.",
   });
 
   const submit = (e) => {
@@ -32,12 +32,15 @@ const AddAnimalsPage = () => {
 
   return (
     <div className="text-center mt-12">
-      <h1 className="mb-8 text-xl font-bold">
+      <h1 className="mb-8 text-xl font-bold max-sm:text-[1.1rem]">
         ADD NEW ANIMAL <br />
-        (Your file will not be uploaded due to security concerns) <br />
+        (Visitors can't upload file in this Demo) <br />
         Instead default file, name and description will be uploaded.
       </h1>
-      <form onSubmit={(e) => submit(e)} className="leading-8 space-y-4">
+      <form
+        onSubmit={(e) => submit(e)}
+        className="leading-8 space-y-4 [&>*]:w-[90%] md:[&>*]:w-[70%]"
+      >
         <input
           onChange={(e) => uploadImage(e.target.files)}
           className="border-2"
@@ -72,7 +75,7 @@ const AddAnimalsPage = () => {
           Add Animal
         </button>
       </form>
-      <img src={animal.image} alt="" />
+      <img src={animal.image} alt="" className="mx-auto" />
     </div>
   );
 };
