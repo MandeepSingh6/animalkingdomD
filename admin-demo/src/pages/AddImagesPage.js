@@ -7,7 +7,7 @@ const AddImagesPage = () => {
   const url = "https://animalkingdomparkbackend.onrender.com/images";
   const [uploadedImage, setUploadedImage] = useState("");
   const [images, setImages] = useState({
-    name: "Test Image(You can't upload your image)",
+    name: "Test Image(Website visitor)",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/1200px-Test-Logo.svg.png",
   });
@@ -29,7 +29,11 @@ const AddImagesPage = () => {
   };
   return (
     <div className="text-center mt-12">
-      <h1 className="mb-8 text-xl font-bold">ADD NEW IMAGE TO GALLERY</h1>
+      <h1 className="mb-8 text-xl font-bold">
+        ADD NEW IMAGE TO GALLERY <br /> (Your file will not be uploaded due to
+        security concerns) <br /> Instead default file and name will be
+        uploaded.
+      </h1>
       <form onSubmit={(e) => submit(e)} className="leading-8 space-y-4">
         <input
           onChange={(e) => {

@@ -29,8 +29,7 @@ const AddEventsPage = () => {
       return {
         ...prev,
         [e.target.name]: e.target.value,
-        event:
-          "Test Event(Only this name can be used due to security concerns in Admin Demo)",
+        event: "Test Event (Website visitor)",
       };
     });
   };
@@ -42,7 +41,8 @@ const AddEventsPage = () => {
         className="w-[90%] sm:w-[80%] md:w-[50%] lg:w-[30%] border-2 mx-auto mt-16 p-8 "
       >
         <h2 className="mb-4 text-center font-extrabold text-lg">
-          Add New Upcoming Event
+          Add New Upcoming Event <br /> (Your event will not be uploaded due to
+          security concerns) <br /> Instead default Event will be added.
         </h2>
         <div className="flex flex-col [&>*]:border-2 [&>*]:p-1 [&>*]:mb-6">
           <input
