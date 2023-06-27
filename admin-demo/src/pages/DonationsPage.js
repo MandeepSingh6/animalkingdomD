@@ -8,9 +8,9 @@ const DonationsPage = () => {
 
   const [donationDetails, setDonationDetails] = useState({
     name: "",
-    amount: 0,
+    amount: "",
     email: "",
-    phone: 0,
+    phone: "",
     address: "",
   });
 
@@ -19,15 +19,15 @@ const DonationsPage = () => {
     Axios.post(url, donationDetails);
     setDonationDetails({
       name: "",
-      amount: 0,
+      amount: "",
       email: "",
-      phone: 0,
+      phone: "",
       address: "",
     });
   };
 
   const handleChange = (e) => {
-    console.log("first");
+    e.preventDefault();
     setDonationDetails((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
@@ -84,15 +84,16 @@ const DonationsPage = () => {
               $200
             </button>
           </div>
-          <div>
-            <button className="border-2 p-1">$</button>
+          <div className="w-full">
+            <span className="">Custom Amount:</span>
+            <br />
             <input
               required
               value={donationDetails.amount}
               name="amount"
               type="number"
-              placeholder="Custom amount"
-              className="border-2 border-l-0 p-1 mb-2"
+              placeholder="$0"
+              className="border-2 p-1 mb-2"
               onChange={handleChange}
             />
           </div>
@@ -104,6 +105,7 @@ const DonationsPage = () => {
               name="name"
               placeholder="Name"
               onChange={handleChange}
+              value={donationDetails.name}
             />
             <input
               required
@@ -112,14 +114,19 @@ const DonationsPage = () => {
               name="email"
               onChange={handleChange}
               placeholder="Email"
+              value={donationDetails.email}
             />
             <input
               required
               className="border-2 px-1"
-              type="number"
+              type="text"
               name="phone"
+              pattern="\d*"
+              maxLength="10"
+              minLength="10"
               placeholder="Phone"
               onChange={handleChange}
+              value={donationDetails.phone}
             />
             <input
               required
@@ -128,6 +135,7 @@ const DonationsPage = () => {
               name="address"
               placeholder="Address"
               onChange={handleChange}
+              value={donationDetails.address}
             />
           </div>
         </div>
