@@ -8,7 +8,7 @@ const DonationsPage = () => {
 
   const [donationDetails, setDonationDetails] = useState({
     name: "",
-    amount: Number,
+    amount: 0,
     email: "",
     phone: 0,
     address: "",
@@ -17,6 +17,13 @@ const DonationsPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     Axios.post(url, donationDetails);
+    setDonationDetails({
+      name: "",
+      amount: 0,
+      email: "",
+      phone: 0,
+      address: "",
+    });
   };
 
   const handleChange = (e) => {
