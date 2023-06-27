@@ -41,7 +41,7 @@ const Tickets = () => {
       <form
         action=""
         onSubmit={(e) => submit(e)}
-        className="w-[90%] sm:w-[80%] md:w-[50%] lg:[30%] px-4 py-16  rounded-md space-y-6 shadow-2xl"
+        className="w-[90%] sm:w-[80%] md:w-[50%] lg:[30%] px-2 py-16  rounded-md space-y-6 shadow-2xl"
       >
         <h2 className="text-lg font-bold mb-6">Book Tickets</h2>
         <div>

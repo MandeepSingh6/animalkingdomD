@@ -3,7 +3,6 @@ import Axios from "axios";
 
 const Tickets = () => {
   const [submitted, setSubmitted] = useState(false);
-  // const url = "http://localhost:4000/tickets";
   const url = "https://animalkingdomparkbackend.onrender.com/tickets";
   const [result, setResult] = useState("");
   const [data, setData] = useState({
@@ -37,11 +36,11 @@ const Tickets = () => {
   console.log("result is", result);
 
   return (
-    <div className="text-center flex justify-center mt-12 p-4">
+    <div className="text-center flex justify-center mt-12 p-2">
       <form
         action=""
         onSubmit={(e) => submit(e)}
-        className="w-[90%] sm:w-[80%] md:w-[50%] lg:[30%] px-4 py-16  rounded-md space-y-6 shadow-2xl"
+        className="w-[90%] sm:w-[80%] md:w-[50%] lg:[30%] px-2 py-16  rounded-md space-y-6 shadow-2xl"
       >
         <h2 className="text-lg font-bold mb-6">Book Tickets</h2>
         <div>

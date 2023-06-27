@@ -25,7 +25,7 @@ const EventsPage = () => {
         {events.map((event, index) => (
           <li
             key={index}
-            className="mx-auto bg-red-600 p-4 rounded-full w-[80%] text-white text-lg"
+            className="mx-auto bg-red-600 p-4 rounded-2xl w-[90%] md:w-[80%] text-white text-lg max-sm:text-sm"
           >
             <p>{event.event}</p>
             <p>
