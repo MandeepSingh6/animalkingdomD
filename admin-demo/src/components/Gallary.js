@@ -15,7 +15,11 @@ const Gallary = () => {
     return <h1 className="text-2xl text-center mt-8">No Image Found</h1>;
   }
   if (images.length < 1) {
-    return <h1 className="text-2xl text-center mt-8">Loading...</h1>;
+    return (
+      <h1 className="text-2xl text-center mt-8">
+        Loading...(Avg. time for initial load : 42 seconds)
+      </h1>
+    );
   } else {
     return (
       <div>

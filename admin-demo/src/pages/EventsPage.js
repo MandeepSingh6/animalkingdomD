@@ -13,7 +13,11 @@ const EventsPage = () => {
   }, []);
 
   if (events.length < 1) {
-    return <h2 className="text-2xl text-center mt-8">Loading...</h2>;
+    return (
+      <h2 className="text-2xl text-center mt-8">
+        Loading...(Avg. time for initial load : 42 seconds)
+      </h2>
+    );
   }
   if (events[0].hasOwnProperty("event") === false) {
     return <h2 className="text-2xl text-center mt-8">No Upcoming Events!</h2>;

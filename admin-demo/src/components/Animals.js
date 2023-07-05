@@ -14,7 +14,12 @@ const Animals = () => {
     return <h1 className="text-2xl text-center mt-8">No Animal Found!</h1>;
   }
   if (data.length < 1) {
-    return <h1 className="text-2xl text-center mt-8">Loading...</h1>;
+    return (
+      <h1 className="text-2xl text-center mt-8">
+        {" "}
+        Loading...(Avg. time for initial load : 42 seconds)
+      </h1>
+    );
   } else {
     return (
       <div>
